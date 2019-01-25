@@ -1,4 +1,4 @@
-# sample-api
+# base-restify-api
 Simple API base in node/restify
 
 ## What am I?
