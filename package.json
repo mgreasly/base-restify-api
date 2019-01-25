@@ -1,5 +1,5 @@
 {
-    "name": "sample-api",
+    "name": "base-restify-api",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",

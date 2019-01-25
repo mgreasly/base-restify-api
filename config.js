@@ -1,4 +1,4 @@
-const defaultName = 'sample-api';
+const defaultName = 'base-restify-api';
 const defaultPort = 3001;
 const defaultEnvironment = 'development';
 const defaultBaseUrl = `http://localhost:${defaultPort}`;
@@ -9,7 +9,5 @@ module.exports = {
 	env: process.env.NODE_ENV || defaultEnvironment,
 	port: process.env.PORT || defaultPort,
 	base_url: process.env.BASE_URL || defaultBaseUrl,
-	db: {
-		uri: process.env.MONGODB_URI || defaultMongoUrl
-	}
+	db: { uri: process.env.MONGODB_URI || defaultMongoUrl }
 };
