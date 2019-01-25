@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const mongooseStringQuery = require('mongoose-string-query');
 const timestamps = require('mongoose-timestamp');
 
-const TodoSchema = new mongoose.Schema(
+const DogSchema = new mongoose.Schema(
     {
-        task: {
+        name: {
             type: String,
             required: true,
             trim: true
@@ -12,14 +12,14 @@ const TodoSchema = new mongoose.Schema(
         status: {
             type: String,
             required: true,
-            enum: ['pending', 'complete', 'in progress', 'overdue'],
-            default: 'pending'
+            enum: ['happy', 'sad', 'confused'],
+            default: 'confused'
         },
     },
     { minimize: false }
 );
-TodoSchema.plugin(timestamps);
-TodoSchema.plugin(mongooseStringQuery);
+DogSchema.plugin(timestamps);
+DogSchema.plugin(mongooseStringQuery);
 
-const Todo = mongoose.model('Todo', TodoSchema);
-module.exports = Todo;
+const Dog = mongoose.model('Dog', DogSchema);
+module.exports = Dog;
